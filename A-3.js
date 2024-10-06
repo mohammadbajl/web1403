@@ -1,17 +1,8 @@
 let args = process.argv.slice(2)
-function sum(first, sec) {
-    return parseInt(first) + parseInt(sec);
-}
-function multiply(first, sec) {
-    return parseInt(first) * parseInt(sec);
+let result = 1;
+
+for (let i = 0; i < args.length; i++) {
+    result *= parseInt(args[i]);
 }
 
-switch (args[0])
-{
-    case "sum":
-        console.log(sum(args[1], args[2]));
-        break;
-    case "multiply":
-        console.log(multiply(args[1], args[2]));
-        break;
-}
+console.log(result);
